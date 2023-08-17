@@ -1,0 +1,15 @@
+*.o
+*.a
+.depend
+.*.cmd
+*.mod.c
+.tmp_versions
+*.mod
+modules.order
+*.symvers
+*.ko
+userspace/blctl
+userspace/blctld
+cscope.*
+.cache
+compile_commands.json
