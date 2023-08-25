@@ -23,10 +23,10 @@ romfs/c906.bin and bl808_demo_linux.bin will be generated.
 - Refer to the diagram below for configuring the burning options.
 ![Alt text](doc/burn.png?raw=true "Burning options")
 - Set up the board according to the pictures below.
-![Alt text](doc/BL808_Module_MB/BL808_Module_MB_setup1)
-![Alt text](doc/BL808_Module_MB/BL808_Module_MB_setup2)
+![Alt text](https://github.com/fangzheli/blwnet_xram/blob/BL808_Module_MB_doc/doc/BL808_Module_MB/BL808_Module_MB_setup1.jpg)
+![Alt text](https://github.com/fangzheli/blwnet_xram/blob/BL808_Module_MB_doc/doc/BL808_Module_MB/BL808_Module_MB_setup2.jpg)
 - Connect the board to PC according to the picture below.
-![Alt text](doc/BL808_Module_MB/BL808_Module_MB_burn_setup)
+![Alt text](https://github.com/fangzheli/blwnet_xram/blob/BL808_Module_MB_doc/doc/BL808_Module_MB/BL808_Module_MB_burn_setup.jpg)
 - Make BL808 enter flashing mode
 - Click "Create & Download"
 
@@ -34,4 +34,4 @@ romfs/c906.bin and bl808_demo_linux.bin will be generated.
 - M0 firmware will boot Linux. Linux console should be available on D0 UART(PIN 16, 17).
 - Reconnect the board to PC as the running mode
 - Connect the UART to serial port to PC according to the picture below.
-![Alt text](doc/BL808_Module_MB/BL808_Module_MB_running_setup)
+![Alt text](doc/BL808_Module_MB/BL808_Module_MB_running_setup.jpg)
