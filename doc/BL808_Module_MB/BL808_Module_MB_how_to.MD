@@ -23,7 +23,7 @@ romfs/c906.bin and bl808_demo_linux.bin will be generated.
 - Refer to the diagram below for configuring the burning options.
 ![Alt text](https://github.com/fangzheli/blwnet_xram/blob/BL808_Module_MB_doc/doc/burn.png?raw=true "Burning options")
 - Set up the board according to the pictures below.
-![Alt text](https://github.com/fangzheli/blwnet_xram/blob/BL808_Module_MB_doc/doc/BL808_Module_MB/BL808_Module_MB_setup1.jpg)
+![Alt text](doc/BL808_Module_MB/BL808_Module_MB_setup1.jpg)
 ![Alt text](https://github.com/fangzheli/blwnet_xram/blob/BL808_Module_MB_doc/doc/BL808_Module_MB/BL808_Module_MB_setup2.jpg)
 - Connect the board to PC according to the picture below.
 ![Alt text](https://github.com/fangzheli/blwnet_xram/blob/BL808_Module_MB_doc/doc/BL808_Module_MB/BL808_Module_MB_burn_setup.jpg)
