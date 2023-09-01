@@ -593,13 +593,13 @@ static int stats_info(struct seq_file *s, void *data)
 
     seq_printf(s, "\n");
 
-    seq_printf(s, "TX ring read ptr %u, write ptr %u, used %zu, free %zu\n",
+    seq_printf(s, "TX ring read ptr %u, write ptr %u, used %zd, free %zd\n",
             BL_GET_RING_HEAD(ring),
             BL_GET_RING_TAIL(ring),
             ring_used_size(ring),
             ring_free_size(ring));
     ring = &dev->rx_ring;
-    seq_printf(s, "RX ring read ptr %u, write ptr %u, used %zu, free %zu\n",
+    seq_printf(s, "RX ring read ptr %u, write ptr %u, used %zd, free %zd\n",
             BL_GET_RING_HEAD(ring),
             BL_GET_RING_TAIL(ring),
             ring_used_size(ring),
