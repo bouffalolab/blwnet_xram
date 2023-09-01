@@ -701,12 +701,12 @@ static int bl_xram_eth_deinit(struct platform_device *pdev)
     if (dev->debugfs_root)
         debugfs_remove_recursive(dev->debugfs_root);
 
+    bl_reset_txrx(dev);
+
     bl_ipc_deinit(dev);
 
     skb_queue_purge(&dev->tx_sk_list);
     skb_queue_purge(&dev->rx_sk_list);
-
-    bl_reset_txrx(dev);
 
     kfree(dev);
     gl_dev.eth_dev = NULL;
