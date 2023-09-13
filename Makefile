@@ -49,6 +49,7 @@ PWD := $(shell pwd)
 
 CC ?= gcc
 AR ?= ar
+CFLAGS ?=
 
 all: lkm userspace
 
@@ -57,7 +58,7 @@ lkm:
 
 .PHONY: userspace
 userspace:
-	$(MAKE) CC=$(CC) AR=$(AR) -C userspace
+	$(MAKE) CC=$(CC) CFLAGS=$(CFLAGS) AR=$(AR) -C userspace
 
 clean:
 	KCPPFLAGS="$(CPPFLAGS)" $(MAKE) -C $(KDIR) M=$(PWD) clean

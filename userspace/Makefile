@@ -1,7 +1,7 @@
 ##  Copyright (C) Bouffalo Lab 2016-2023
 ##  SPDX-License-Identifier: Apache-2.0
 
-CFLAGS := -DBUILD_USERSPACE -g
+override CFLAGS += -DBUILD_USERSPACE -g
 CC ?= gcc
 AR ?= ar
 
@@ -24,7 +24,7 @@ utils.o: utils.c utils.h
 
 
 blctl: blctl_main.o $(CTLLIB)
-	$(CC) $(CFALGS) $^ -o $@ -L. -lblctl -lpthread
+	$(CC) $(CFLAGS) $^ -o $@ -L. -lblctl -lpthread
 
 blctl_main.o: blctl_main.c utils.h
 	$(CC) $(CFLAGS) -c $< -o $@
