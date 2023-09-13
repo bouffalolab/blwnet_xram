@@ -634,14 +634,14 @@ static int bl_xram_eth_init(struct platform_device *pdev)
     int retval = -EINVAL;
     struct bl_eth_device *dev = NULL;
 
-    if (pdev->num_resources < 1) {
+    if (platform_get_irq(pdev, 0) < 0) {
         return -EINVAL;
     }
     if ((dev = kcalloc(1, sizeof(*dev), GFP_KERNEL)) == NULL) {
         return -ENOMEM;
     }
 
-    dev->irq = pdev->resource[0].start;
+    dev->irq = platform_get_irq(pdev, 0);
 
     dev->workqueue = alloc_workqueue("BL_WORK_QUEUE", WQ_HIGHPRI | WQ_MEM_RECLAIM | WQ_UNBOUND, 1);
     if (!dev->workqueue) {
