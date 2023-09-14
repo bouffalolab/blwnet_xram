@@ -18,6 +18,7 @@
 #include <linux/mod_devicetable.h>
 #include <linux/platform_device.h>
 #include <linux/debugfs.h>
+#include <linux/firmware/bflb-m0-fw.h>
 
 #include "asm-generic/io.h"
 #include "main.h"
@@ -634,6 +635,9 @@ static int bl_xram_eth_init(struct platform_device *pdev)
     int retval = -EINVAL;
     struct bl_eth_device *dev = NULL;
 
+    if (bflb_run_m0_fw(&pdev->dev, "bl808-m0-fh.bin", 0x53F00000)) {
+        return -EINVAL;
+    }
     if (platform_get_irq(pdev, 0) < 0) {
         return -EINVAL;
     }
