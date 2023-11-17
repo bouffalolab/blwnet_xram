@@ -21,7 +21,7 @@ This section provides a quick guide to experience Wi-Fi functionality. For instr
 
 2. Download bl_iot_sdk
   ```bash
-  git clone --recursive git@github.com:bouffalolab/bl_iot_sdk.git
+  git clone --recursive https://github.com/bouffalolab/bl_iot_sdk.git
   ```
 
 3. Build M0 and D0 firmwares
