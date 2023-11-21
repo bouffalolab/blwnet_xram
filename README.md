@@ -13,6 +13,10 @@ The driver will create two interfaces: bleth0 for STA (Station) and bleth1 for A
 At present, STA, AP and STA/AP mixed modes are supported.
 
 ## Get started
+Documentation in this section and the one following is **deprecated** as blwnet_xram
+is already integrated into [Bouffalo Buildroot](https://github.com/bouffalolab/buildroot_bouffalo).
+However, the Wi-Fi usage guide remains important. Please use the buildroot to build all components.
+
 This section provides a quick guide to experience Wi-Fi functionality. For instructions on compiling the related binary files, please refer to the next section.
 
 1. Environment requirements
