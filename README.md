@@ -73,7 +73,15 @@ romfs/c906.bin and bl808_demo_linux.bin will be generated.
   ```bash
   [CHANNEL=chn] ./blctl start_ap <ssid> [password]
   ifconfig bleth1 192.169.99.1
-  udhcpd udhcpd.conf
+  udhcpd udhcpd.conf # See userspace/udhcpd.conf for example
+  ```
+  How to act as a Wi-Fi gateway
+  - Connect to AP and obtain IP address
+  - Start AP using the same channel as connected AP
+  - Enable IP forwarding, NAT:
+  ```bash
+  sysctl -w net.ipv4.ip_forward=1
+  iptables -t nat -A POSTROUTING -s 192.169.99.0/24 -j MASQUERADE
   ```
   For more command options, see output of:
   ```bash
